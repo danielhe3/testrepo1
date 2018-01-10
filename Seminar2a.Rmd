@@ -3,8 +3,7 @@ title: "Seminar2a"
 author: "Daniel He"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
-  html_document: 
-    keep_md: yes
+  github_document
 ---
 
 ```{r setup, include=FALSE}
