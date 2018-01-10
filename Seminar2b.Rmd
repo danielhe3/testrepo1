@@ -63,7 +63,7 @@ ggplot(data = mpg,
 ggplot(data = mpg, 
        mapping = aes(x = displ, y = hwy, color = year)) +
   geom_point() +
-  geom_smooth(method="ln")
+  geom_smooth(method="lm")
 ```
 
 ## Bar chart

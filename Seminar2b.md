@@ -94,11 +94,8 @@ ggplot(data = mpg,
 ggplot(data = mpg, 
        mapping = aes(x = displ, y = hwy, color = year)) +
   geom_point() +
-  geom_smooth(method="ln")
+  geom_smooth(method="lm")
 ```
-
-    ## Warning: Computation failed in `stat_smooth()`:
-    ## object 'ln' of mode 'function' was not found
 
 ![](Seminar2b_files/figure-markdown_github/geom_smooth-3.png)
 
