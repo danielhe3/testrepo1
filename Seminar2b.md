@@ -68,16 +68,39 @@ Including Plots
 
 ![](Seminar2b_files/figure-markdown_github/blue%20dots-1.png)
 
-ggplot(data = <DATA>) + <GEOM_FUNCTION>( mapping = aes(<MAPPINGS>), stat = <STAT>, position = <POSITION> ) + <COORDINATE_FUNCTION> + <SCALE_FUNCTION> + <AXIS_FUNCTION> + <FACET_FUNCTION>
+### `geom_smooth()` using method = 'loess'
 
-`geom_smooth()` using method = 'loess'
---------------------------------------
+``` r
+ggplot(data = mpg, 
+       mapping = aes(x = displ, y = hwy)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+```
 
 ![](Seminar2b_files/figure-markdown_github/geom_smooth-1.png)
+
+``` r
+ggplot(data = mpg, 
+       mapping = aes(x = displ, y = hwy, color = year)) +
+  geom_point() +
+  geom_smooth()
+```
 
     ## `geom_smooth()` using method = 'loess'
 
 ![](Seminar2b_files/figure-markdown_github/geom_smooth-2.png)
+
+``` r
+ggplot(data = mpg, 
+       mapping = aes(x = displ, y = hwy, color = year)) +
+  geom_point() +
+  geom_smooth(method="ln")
+```
+
+    ## Warning: Computation failed in `stat_smooth()`:
+    ## object 'ln' of mode 'function' was not found
+
+![](Seminar2b_files/figure-markdown_github/geom_smooth-3.png)
 
 Bar chart
 ---------
